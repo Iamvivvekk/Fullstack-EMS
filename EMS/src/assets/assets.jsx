@@ -12,7 +12,7 @@ export const dummyEmployeeDashboardData = {
     currentMonthAttendance: 20,
     pendingLeaves: 2,
     latestPayslip: {
-        netSalary: 2000,
+        netSalary: "2,000",
     },
     employee: {
         firstName: "John",
