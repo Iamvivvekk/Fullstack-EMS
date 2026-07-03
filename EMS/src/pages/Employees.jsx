@@ -23,11 +23,11 @@ const Employees = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1000);
-  }, []);
+  }, [selectedDept]);
 
   useEffect(() => {
     fetchEmployees();
-  }, []);
+  }, [fetchEmployees]);
 
   function handleOnChange() {
     setSearch(e.target.value);
@@ -123,7 +123,7 @@ const Employees = () => {
               </button>
             </div>
 
-            <div className="p-3"></div> 
+            <div className="p-3"></div>
             {/* form starts here */}
             <EmployeeForm />
           </div>
