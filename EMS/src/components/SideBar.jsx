@@ -35,7 +35,7 @@ const SideBar = () => {
     window.location.href = "/login";
   }
 
-  const role = "" || "EMPLOYEE";
+  const role = "ADMIN" || "EMPLOYEE";
 
   const navItemList = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutGridIcon },
