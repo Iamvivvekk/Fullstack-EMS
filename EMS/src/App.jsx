@@ -44,6 +44,7 @@ const App = () => {
           <Route path="/employees" element={<Employees />} />
           <Route path="/leave" element={<Leave />} />
           <Route path="/payslip" element={<Payslip />} />
+          <Route path="/print/payslip/:id" element={<PrintPayslip />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
 
