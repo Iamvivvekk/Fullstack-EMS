@@ -9,7 +9,7 @@ import Payslip from "./pages/Payslip";
 import PrintPayslip from "./pages/PrintPayslip";
 import Settings from "./pages/Settings";
 import Layout from "./pages/Layout";
-import LoginForm from "./components/LoginForm";
+import LoginForm from "./components/login/LoginForm";
 
 const App = () => {
   return (

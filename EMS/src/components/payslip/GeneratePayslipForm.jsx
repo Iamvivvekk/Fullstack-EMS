@@ -18,9 +18,7 @@ const GeneratePayslipForm = ({ payslips, onCancel }) => {
         {/* form header */}
         <div className="flex justify-between items-baseline ">
           <div className="flex flex-col justify-center">
-            <h3 className="text-lg font-semibold text-slate-900">
-              Generate Payslip
-            </h3>
+            <h3 className="overlay-title">Generate Payslip</h3>
             <p className="text-sm font-medium text-slate-500 mb-5">
               Generate payslips for your employees
             </p>

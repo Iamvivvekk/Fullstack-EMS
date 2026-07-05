@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { dummyAttendanceData } from "./../assets/assets";
-import Loader from "./../components/Loader";
+import Loader from "./../components/common/Loader";
 import AttendanceStats from "./../components/attendance/AttendanceStats";
 import AttendanceHistory from "./../components/attendance/AttendanceHistory";
 import CheckInButton from "./../components/attendance/CheckInButton";
@@ -41,7 +41,7 @@ const Attendence = () => {
       <AttendanceStats history={history} />
       <AttendanceHistory history={history} />
 
-      <CheckInButton/>
+      <CheckInButton />
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { dummyAdminDashboardData, dummyEmployeeDashboardData } from "../assets/assets";
-import Loader from "../components/Loader";
-import EmployeeDashboard from "../components/EmployeeDashboard";
-import AdminDashboard from "../components/AdminDashboard";
+import Loader from "../components/common/Loader";
+import EmployeeDashboard from "../components/dashboard/EmployeeDashboard";
+import AdminDashboard from "../components/dashboard/AdminDashboard";
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
@@ -14,10 +14,7 @@ const Dashboard = () => {
       setLoading(false);
     }, 1000);
   }, []);
-
-
-  console.log(data);
-  
+ 
 
   if (loading) return <Loader />;
 

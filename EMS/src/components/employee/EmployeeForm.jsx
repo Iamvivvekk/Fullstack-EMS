@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { DEPARTMENTS } from "./../assets/assets";
+import { DEPARTMENTS } from "../../assets/assets";
 import { Loader2Icon, OptionIcon } from "lucide-react";
 
 const EmployeeForm = ({ initialData, onSuccess, onCancel }) => {
@@ -40,7 +40,7 @@ const EmployeeForm = ({ initialData, onSuccess, onCancel }) => {
               name="phone"
               defaultValue={initialData?.phone}
               placeholder="9876543210"
-              className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="input-hide-increment"
             />
           </div>
           <div>
@@ -93,7 +93,7 @@ const EmployeeForm = ({ initialData, onSuccess, onCancel }) => {
               type="text"
               name="position"
               defaultValue={initialData?.position}
-              className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="input-hide-increment"
             />
           </div>
 
@@ -103,7 +103,7 @@ const EmployeeForm = ({ initialData, onSuccess, onCancel }) => {
               type="number"
               name="position"
               defaultValue={initialData?.basicSalary || 0}
-              className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="input-hide-increment"
             />
           </div>
 
@@ -113,7 +113,7 @@ const EmployeeForm = ({ initialData, onSuccess, onCancel }) => {
               type="number"
               name="allowance"
               defaultValue={initialData?.allowance || 0}
-              className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="input-hide-increment"
             />
           </div>
           <div>
@@ -122,7 +122,7 @@ const EmployeeForm = ({ initialData, onSuccess, onCancel }) => {
               type="number"
               name="deductions"
               defaultValue={initialData?.deductions || 0}
-              className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              className="input-hide-increment"
             />
           </div>
           {isEditMode && (

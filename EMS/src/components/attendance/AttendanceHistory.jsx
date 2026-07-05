@@ -56,7 +56,6 @@ const AttendanceHistory = ({ history }) => {
                       )}
                     </td>
                     <td className="px-6 py-4">
-                      {" "}
                       {record.dayType !== "-" ? (
                         <span
                           className={`badge ${record.status === "PRESENT" ? "badge-success" : record.status === "LATE" ? " badge-warning " : " badge-danger "}`}

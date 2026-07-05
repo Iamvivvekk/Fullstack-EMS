@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LoginLeftSide from "./../components/LoginLeftSide";
+import LoginLeftSide from "../components/login/LoginLeftSide";
 import { ShieldIcon, UserIcon, ArrowRightIcon } from "lucide-react";
 // import Date from 'react'
 

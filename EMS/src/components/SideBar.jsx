@@ -23,10 +23,6 @@ const SideBar = () => {
     setUserName(dummyProfileData.firstName + " " + dummyProfileData.lastName);
   }, [pathname]);
 
-  //   close mobile menu on route change
-  useEffect(() => {
-    console.log(pathname);
-  });
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
@@ -35,7 +31,7 @@ const SideBar = () => {
     window.location.href = "/login";
   }
 
-  const role = "" || "EMPLOYEE";
+  const role = " " || "EMPLOYEE";
 
   const navItemList = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutGridIcon },

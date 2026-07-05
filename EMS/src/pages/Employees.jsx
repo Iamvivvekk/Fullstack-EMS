@@ -1,9 +1,9 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { dummyEmployeeData, DEPARTMENTS } from "../assets/assets";
 import { PlusIcon, SearchIcon, UserStarIcon, X } from "lucide-react";
-import Loader from "./../components/Loader";
-import EmployeeCard from "../components/EmployeeCard";
-import EmployeeForm from "../components/EmployeeForm";
+import Loader from "./../components/common/Loader";
+import EmployeeCard from "./../components/employee/EmployeeCard";
+import EmployeeForm from "../components/employee/EmployeeForm";
 
 const Employees = () => {
   const [employees, setEmployees] = useState([]);
@@ -89,6 +89,7 @@ const Employees = () => {
             ? "No Employess found"
             : filtered.map((e) => (
                 <EmployeeCard
+                  key={e._id || e.id}
                   employee={e}
                   onDelete={fetchEmployees}
                   onEdit={(e) => setEditEmployee(e)}
@@ -107,9 +108,7 @@ const Employees = () => {
           >
             <div className="flex justify-between items-center pt-6 ">
               <div className="flex flex-col justify-center">
-                <h2 className="text-lg font-semibold text-slate-900">
-                  Add New Employee
-                </h2>
+                <h2 className="overlay-title">Add New Employee</h2>
                 <p className="text-sm font-medium text-slate-500 ">
                   Create a user account and employee profile
                 </p>

@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { dummyLeaveData } from "../assets/assets";
-import Loader from "../components/Loader";
+import Loader from "../components/common/Loader";
 import LeaveHistory from "../components/leave/LeaveHistory";
 import {
   PalmtreeIcon,

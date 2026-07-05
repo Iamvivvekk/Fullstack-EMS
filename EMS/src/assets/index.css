@@ -79,7 +79,12 @@
     @apply text-slate-500 text-sm mt-1;
   }
 
-  
+  .overlay-title {
+    @apply overlay-title;
+  }
+  .overlay-subtitle {
+    @apply text-sm font-medium text-slate-500 mb-5;
+  }
 
   /* Animations */
   .animate-fade-in {

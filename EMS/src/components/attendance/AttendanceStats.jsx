@@ -33,10 +33,13 @@ const AttendanceStats = ({ history }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 mb-3 mt-5 gap-5 sm:gap-6">
       {stats.map((d) => (
-        <div key={d.label} className="card card-hover flex items-center justify-baseline gap-5 relative px-3 py-6 group ">
-          <div className="absolute rounded-l-2xl bg-slate-400 w-1 top-0 bottom-0 left-0 my-0.5 group-hover:bg-indigo-500/70 transition-colors duration-200" />
+        <div
+          key={d.label}
+          className="card card-hover flex items-center justify-baseline gap-5 relative px-3 py-6 group "
+        >
+          <div className="absolute rounded-l-full bg-slate-400 w-1 top-0 bottom-0 left-0 my-0.5 group-hover:bg-indigo-500/70 transition-colors duration-200" />
           {/* icon */}
-          <d.icon className="size-10 p-2  rounded-md bg-slate-100 group-hover:text-indigo-500/70 transition-colors duration-200" />
+          <d.icon className="size-10 p-2 bg-slate-100 text-slate-600 group-hover:text-indigo-500/70 transition-colors duration-200 rounded-lg" />
           <div className="flex flex-col items-baseline justify-center">
             <p className="text-slate-700  text-sm font-semibold">{d.label}</p>
             <p className="text-slate-900 font-bold text-2xl">{d.value}</p>

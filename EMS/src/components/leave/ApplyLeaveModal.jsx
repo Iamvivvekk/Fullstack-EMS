@@ -1,4 +1,5 @@
-import { Calendar, File, Thermometer, X } from "lucide-react";
+import { Calendar, File, Thermometer } from "lucide-react";
+import CloseOverlayButton from "../common/CloseOverlayButton";
 
 const ApplyLeaveModal = ({ open, onClose }) => {
   // const today = new Date();
@@ -25,9 +26,8 @@ const ApplyLeaveModal = ({ open, onClose }) => {
                 Submit your leave request for approval
               </p>
             </div>
-            <button className="p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-400 hover:text-shadow-slate-600">
-              <X size={18} onClick={onClose} className="w-4 h-4" />
-            </button>
+
+            <CloseOverlayButton onClose={onClose} />
           </div>
 
           <form className="p-3 border-2 border-slate-100 rounded-md flex flex-col gap-3">
