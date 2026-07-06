@@ -11,6 +11,7 @@ import profileRouter from "./routes/profile.routes.js";
 import attendanceRouter from "./routes/attendance.routes.js";
 import leaveRouter from "./routes/leaveApplication.routes.js";
 import payslipRouter from "./routes/payslip.routes.js";
+import dashboardRouter from "./routes/dashboard.routes.js";
 
 const app = express();
 
@@ -29,5 +30,6 @@ app.use("/api/v1/auth", profileRouter);
 app.use("/api/v1/attendance", attendanceRouter);
 app.use("/api/v1/leave", leaveRouter);
 app.use("/api/v1/payslip", payslipRouter);
+app.use("/api/v1/dashboard", dashboardRouter);
 
 export default app;
