@@ -6,7 +6,7 @@ import PayslipTable from "../components/payslip/PayslipTable";
 import GeneratePayslipForm from "../components/payslip/GeneratePayslipForm";
 
 const Payslip = () => {
-  const [isAdmin, setIsAdmin] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [showGeneratePayslip, setShowGeneratePayslip] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [payslips, setPayslips] = useState([]);
@@ -36,10 +36,12 @@ const Payslip = () => {
               : "Your Payslip History"}
           </p>
         </div>
-        <GeneratePayslipButton
-          isAdmin={isAdmin}
-          onClick={() => setShowGeneratePayslip(true)}
-        />
+        {(
+          <GeneratePayslipButton
+            isAdmin={isAdmin}
+            onClick={() => setShowGeneratePayslip(true)}
+          />
+        )}
       </div>
       {/* payslip-history */}
       <PayslipTable isAdmin={isAdmin} payslips={payslips} />
