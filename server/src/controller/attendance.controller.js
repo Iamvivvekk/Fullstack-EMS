@@ -9,7 +9,7 @@ import Employee from "../models/employee.model.js";
 export const clockInOut = async (req, res) => {
   const session = req.session;
   try {
-    const employee = await Employee.findById(session.userId);
+    const employee = await Employee.findOne({ userId: session.userId });
 
     if (!employee) return res.status(404).json({ error: "Employee not found" });
 
@@ -86,7 +86,7 @@ export const getAttendance = async (req, res) => {
   const limit = req.query.limit || 30;
 
   try {
-    const employee = await Employee.findById(session.userId);
+    const employee = await Employee.findOne({ userId: session.userId });
     if (!employee) return res.status(400).json({ error: "Employee not found" });
 
     const attendance = await Attendance.find({

@@ -66,7 +66,7 @@ export const changePassword = async () => {
     return res.status(400).json({ error: "Both password required" });
 
   try {
-    const user = await User.findById(session.userId);
+    const user = await User.findOne({ userId: session.userId });
     const isCorrectPassword = await bcrypt.compare(
       currentPassword,
       user.password,
