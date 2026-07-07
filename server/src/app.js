@@ -32,6 +32,5 @@ app.use("/api/v1/leave", leaveRouter);
 app.use("/api/v1/payslip", payslipRouter);
 app.use("/api/v1/dashboard", dashboardRouter);
 
-app.use("/*splat",(req,res)=>{res.send("page not found")})
 
 export default app;
